@@ -23,25 +23,6 @@ let candlestickData = [];
 
 const server = new grpc.Server();
 
-// server.addService(chartProto.ChartService.service, {
-//     Subscribe: (call) => {
-//         const { timeframe, symbol_list } = call.request;
-
-//         symbol_list.forEach(symbol => {
-//             const interval = setInterval(() => {
-//                 const tickData = generateTickData(symbol);
-//                 call.write({ symbol, bar: tickData });
-
-//                 candlestickData.push({ symbol, ...tickData });
-//                 saveDataToFile();
-
-//             }, 1000);
-
-//             call.on('end', () => clearInterval(interval));
-//         });
-//     },
-// });
-
 server.addService(chartProto.ChartService.service, {
     Subscribe: (call) => {
         const { timeframe, symbol_list } = call.request;
