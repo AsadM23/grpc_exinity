@@ -1,0 +1,20 @@
+{
+  "name": "grpc-chart-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.1",
+    "@grpc/proto-loader": "^0.7.13",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "sinon": "^18.0.0"
+  }
+}
